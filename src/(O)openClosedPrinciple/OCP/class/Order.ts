@@ -24,7 +24,7 @@ export class Order {
 
     this._orderStatus = 'closed';
     this.message.sendMessage(
-      `Seu pedido no valor de R$${this.cart.total()} está sendo processado!`,
+      `Seu pedido no valor de R$${this.cart.totalWithDiscount()} está sendo processado!`,
     );
     this.persist.saveOrder();
     this.cart.clear();
