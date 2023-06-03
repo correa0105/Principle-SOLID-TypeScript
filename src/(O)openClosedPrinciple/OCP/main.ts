@@ -1,8 +1,3 @@
-/*
-Open/Closed Principle -
-Entidades devem estar abertas para extensão, mas fechadas para modificação.
-*/
-
 import { ShoppingCart } from './class/ShoppingCart';
 import { Product } from './class/Product';
 import { Order } from './class/Order';
