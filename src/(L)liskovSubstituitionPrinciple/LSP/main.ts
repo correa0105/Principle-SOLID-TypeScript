@@ -1,4 +1,12 @@
-/* LSP: SUBTIPOS PRECISAM SER SUBSTITUIVEIS POR SEUS TIPOS DE BASE */
+/*
+Liskov Substitution Principle (Princípio da Substituição de Liskov) -
+Se ϕ(x) é uma propriedade demonstrável dos objetos x de tipo T. Então ϕ(y)
+deve ser verdadeiro para objetos y de tipo S onde S é um subtipo de T.
+
+Simples: Subtipos precisam ser substituíveis por seus tipos de base.
+Mais Simples: Se meu programa espera um Animal, algo do tipo
+Cachorro (que herda de Animal) deve servir como qualquer outro Animal.
+*/
 
 import { ShoppingCart } from './class/ShoppingCart';
 import { Product } from './class/Product';

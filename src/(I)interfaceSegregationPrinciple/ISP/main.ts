@@ -1,3 +1,8 @@
+/*
+Interface Segregation Principle (Princípio da Segregação de Interface) -
+Os clientes não devem ser forçados a depender de types, interfaces ou membros abstratos que não utilizam
+*/
+
 import { ShoppingCart } from './class/ShoppingCart';
 import { Product } from './class/Product';
 import { Order } from './class/Order';

@@ -1,6 +1,11 @@
 /*
-Open/Closed Principle -
-Entidades devem estar abertas para extensão, mas fechadas para modificação.
+Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem
+depender de abstrações.
+Dependa de abstrações, não de implementações.
+Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações.
+
+Classes de baixo nível são classes que executam tarefas (os detalhes)
+Classes de alto nível são classes que gerenciam as classes de baixo nível.
 */
 
 import { ShoppingCart } from './class/ShoppingCart';
@@ -13,14 +18,20 @@ import {
   TenPercentDiscount,
   FiftyPercentDiscount,
 } from './class/Discount';
+import { IndividualCustomer } from './class/Customer';
 
 // const fiftyPercentDescount = new FiftyPercentDiscount();
 // const tenPercentDiscount = new TenPercentDiscount();
 const noDisount = new NoDiscount();
 const shoppingCart = new ShoppingCart(noDisount);
+const individualCustomer = new IndividualCustomer(
+  'Lucas',
+  'Corrêa',
+  '035.316.740-13',
+);
 const message = new Message();
 const persist = new Persist();
-const order = new Order(shoppingCart, message, persist);
+const order = new Order(shoppingCart, message, persist, individualCustomer);
 
 shoppingCart.addItem(new Product('Placa Mãe', 1080.35));
 shoppingCart.addItem(new Product('Placa de Video', 2680.95));
